@@ -1,15 +1,12 @@
-export interface Group {
-  id: string;
-  name: string;
-  description: string;
-  members: string[];
-}
+import type { Group } from '../src/types'
 
-export const groups: Group[] = [
-  {
-    id: "ai-group",
-    name: "AI模型交流群",
-    description: "ChatGPT、Gemini、DeepSeek、豆包 同群聊天",
-    members: ["chatgpt", "gemini", "deepseek", "doubao"]
-  }
-]
+export default function generateGroups(): Group[] {
+  return [
+    {
+      id: 'ai-group',
+      name: 'AI模型交流群',
+      description: '四个大模型同群聊天',
+      members: ['chatgpt', 'gemini', 'deepseek', 'doubao'],
+    },
+  ]
+}
